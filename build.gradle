@@ -17,8 +17,27 @@ repositories {
 	mavenCentral()
 }
 
+//Spring
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //Java Persistence Api + Hibernate
+}
+
+//Other
+dependencies {
+	runtimeOnly 'org.postgresql:postgresql'
+}
+
+//Lombok
+dependencies {
+	compileOnly 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+}
+
+//Tests
+dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
